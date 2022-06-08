@@ -1,0 +1,41 @@
+public class Student {
+private Course course ;
+private int ID ;
+private String name ;
+public Student(String name, int ID)
+{
+this.name = name ;
+this.ID = ID ;
+}
+public boolean addCourse(String code){
+if( check(code ) == false ) return false;
+int section = (int)(Math.random() * 10 + 1 ) ;
+course = new Course(code , section ) ;
+return true;
+}
+public boolean addCourse(String code, int section)
+{
+if( check(code ) == false ) return false;
+course = new Course(code , section ) ;
+return true;
+}
+public boolean check(String code)
+{
+if(code.length() != 6 ) return false;
+if( code.indexOf(' ') != -1 ) return false ;
+if( ! Character.isLetter(code.charAt(0)) || !
+Character.isLetter(code.charAt(1)) ||
+! Character.isLetter(code.charAt(2)) )
+return false ;
+if( ! Character.isDigit(code.charAt(3)) || !
+Character.isDigit(code.charAt(4)) ||
+! Character.isDigit(code.charAt(5)) )
+return false ;
+return true;
+}
+public void display()
+{
+course.display();
+System.out.println("ID : " + ID + " , Name : " + name );
+}
+}
