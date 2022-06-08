@@ -1,0 +1,13 @@
+public class Course {
+private String code ;
+private int section ;
+public Course(String code, int section)
+{
+this.code = code ;
+this.section = section ;
+}
+public void display()
+{
+System.out.println("code : " + code + " , section : " + section );
+}
+}
