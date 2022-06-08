@@ -1,0 +1,27 @@
+public class TestCourse {
+public static void main(String[] args) {
+
+Student stu1 = new Student( "Maha" , 111 ) ;
+Student stu2 = new Student( "Lama" , 222 ) ;
+
+if( stu1.addCourse("CSC11") )
+ System.out.println("add course CSC11 done to stu1 ");
+else
+ System.out.println("Can't add course CSC11 to stu1 ");
+
+if( stu1.addCourse("CSC111") )
+ System.out.println("add course CSC111 done to stu1");
+else
+ System.out.println("Can't add course CSC111 to stu1 ");
+
+if( stu2.addCourse("CSC212" , 9 ) )
+ System.out.println("add course CSC212 done to stu2 ");
+else
+ System.out.println("Can't add course CSC212 to stu2 ");
+
+System.out.println("stu1 : ");
+stu1.display();
+System.out.println("stu2: ");
+stu2.display();
+}
+}
